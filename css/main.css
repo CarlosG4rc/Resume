@@ -228,3 +228,28 @@ img{
 .site-footer p span{
     font-weight: 700;
 }
+/**Habilidades**/
+@media (min-width: 768px){
+    .contenido-habilidades{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.personal{
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px){
+    .personal{
+        flex:0 0 calc(33.3% - 1rem);
+    }
+}
+.contenido-skill{
+    padding: 2rem;
+}
+.contenido-skill h4,
+.contenido-skill p{
+    margin: 0;
+}
