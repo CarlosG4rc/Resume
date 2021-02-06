@@ -315,11 +315,27 @@ img{
     background-color: aqua;
     color: #ffffff;
 }
-main article{
-
-}
 main article img{
     max-width: 100%;
     margin-bottom: 4rem;
 }
-
+.iconos-contacto{
+    text-align: center;
+}
+.iconos-contacto i{
+    color: black;
+    font-size: 8rem;
+}
+.iconos-conacto:hover{
+    color: blue;
+}
+.contacto-personal{
+    text-align: center;
+}
+.contacto-personal li i{
+    font-size: 4rem;
+}
+.contacto-personal li span{
+    font-size: 2rem;
+    font-family:'Open Sans', sans-serif;
+}
