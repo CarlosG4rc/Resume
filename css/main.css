@@ -141,20 +141,21 @@ img{
 @media (min-width:768px){
     .navegacion a{
         display:inline;
-        margin-right: 2rem;
     }
     .navegacion a:last_of_type{
         margin: 0;
     }
 }
 .texto-header{
-    color: black;
+    color: #ffffff;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
 }
 @media(min-width: 768px){
     .texto-header{
         margin-top: 15rem;
+        color: #000000;
     }
 }
 .texto-header p{
@@ -271,7 +272,7 @@ img{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
-    opacity: 1;
+    opacity: 0;
     transition: .5s ease;
     background-color: #008cba;
 }
@@ -283,8 +284,9 @@ img{
 }
 
 .personal i:hover{
-    opacity: 0;
+    opacity: 1;
 }
+
 .prof i{
     font-size: 10rem;
     display: flex;
@@ -328,6 +330,7 @@ main article img{
 }
 .iconos-contacto{
     text-align: center;
+    
 }
 .iconos-contacto i{
     color: black;
