@@ -271,12 +271,19 @@ img{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: #008cba;
 }
 .personal h4{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+}
+
+.personal i:hover{
+    opacity: 0;
 }
 .prof i{
     font-size: 10rem;
@@ -293,11 +300,11 @@ img{
 }
 .java:hover{
     background-color: yellow;
-    color: black;
+    color: #008cba;
 }
 .python:hover{
     background-color: #306998;
-    color: #f0db4f;
+    color: yellow;
 }
 .html:hover{
     background-color: #f06529;
