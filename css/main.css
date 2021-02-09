@@ -110,13 +110,11 @@ img{
     }
 }
 .site-header{
-    background-image: url(../img/Computer.jpg);
+    background-image: url(../img/White.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* -webkit-background-composite: inherit; */
     height: 60rem;
-    -webkit-filter: opacity(0.9);
 }
 .site-header a{
     color: #000000;
