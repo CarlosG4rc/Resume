@@ -31,14 +31,31 @@
         </div>
     </header>
     <main>
-        <h2>Contactame</h2>
-        <h3>Puedes contactarme por medio de mis redes sociales o envíame un correo.</h3>
-        <div class="contenedor iconos-contacto">
-            <a href="https://web.facebook.com/profile.php?id=100005511338052"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/CarlosG4r"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-24bbb099/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/CarlosG4rc"><i class="fab fa-github-square"></i></a>
+        
+        <form class="contenedor contenido-centrado" action="mailto:carlosesolrac93@gmail.com" method="post" name="form1">
+            <fieldset>
+                <legend>Contactame</legend>
+                <label for="nombre">Nombre: </label>
+                <input class="nombre" id="nombre" name="nombre" type="text" placeholder="Tu Nombre" />
+                <label for="email">Email: </label>
+                <input class="email" id="email" name="nombre" type="text" placeholder="Tu Email"/>
+                <p> ¿Te gustaría contactarme o darme tu opinión?</p>
+                <textarea class="opinion" id="opinion" name="opinion"></textarea>
+                <input class="btn btn-secudnario" name="Submit" type="submit" value="Enviar" />
+            </fieldset>
+        </form>
+        <div class="contenedor contenido-centrado">
+            <fieldset>
+                <legend>Redes Sociales</legend>
+                <div class="iconos-contacto">
+                    <a href="https://web.facebook.com/profile.php?id=100005511338052"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/CarlosG4r"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-24bbb099/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/CarlosG4rc"><i class="fab fa-github-square"></i></a>
+                </div>
+            </fieldset>
         </div>
+        
         <div class="correo-telefono">
             <ul class="contacto-personal">
                 <li><i class="far fa-envelope"> <span> carlosesolrac93@gmail.com</span></i></li>
