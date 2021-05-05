@@ -141,7 +141,7 @@ img{
     height: 60rem;
 }
 .site-header a{
-    color: var(--main-bg-negro);
+    color: var(--main-bg-blanco);
 }
 .site-header h1{
     text-align: center;
