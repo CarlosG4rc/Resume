@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
     <header class="site-header">
         <div class="contenedor">
             <div class="barra">
@@ -205,6 +206,21 @@
         </div>
     </footer>
     <script>
+        var mybutton = document.getElementById("myBtn")
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction(){
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                mybutton.style.display = "block";
+            }
+            else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
         $(document).ready(function(){
             $('body').scrollspy({target:".navegacion", offset: 50});
 
