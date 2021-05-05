@@ -140,6 +140,9 @@ img{
     background-size: cover;
     height: 60rem;
 }
+.site-header a h1{
+    color: var(--main-bg-negro);
+}
 .site-header a{
     color: var(--main-bg-blanco);
 }
