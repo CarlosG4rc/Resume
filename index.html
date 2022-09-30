@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integraty="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4ZBNTSRyMA2Fd33n5dQBlWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -24,7 +25,9 @@
             <b><p>Estas viendo esto el <u><label id='today'></label></u></p></b>
             <py-script>
                 import datetime as dt
+                import time
                 pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+                pyscript.write('time', time.strftime('%H:%M:%S'))
             </py-script>
             <div class="barra">
                 <a href="#">
@@ -80,6 +83,7 @@
                     <a href="https://github.com/CarlosG4rc/Kardex" class="btn btn-secudnario">Código</a>
                 </li>
             </ul>
+            <p><u><label style="font-family: 'Orbitron', sans-serif; color:#00FF00; font-size: 50px;" id='time'></label></u></p>
         </aside>
     </div>
     <div class="contenedor">
