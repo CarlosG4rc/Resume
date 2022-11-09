@@ -17,6 +17,11 @@
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <py-env>
+        - matplotlib
+        - requests
+        
+    </py-env>
 </head>
 <body>
     <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
@@ -24,10 +29,13 @@
         <div class="contenedor">
             <b><p><u><label id='today'></label></u></p></b>
             <py-script>
+                
+                import numpy
                 import datetime as dt
                 import time
                 pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
                 pyscript.write('time', time.strftime('%H:%M:%S'))
+
             </py-script>
             <div class="barra">
                 <a href="#">
