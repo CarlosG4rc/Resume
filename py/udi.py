@@ -6,6 +6,6 @@ url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/202
 payload={}
 headers = {}
 
-response = requests.get(url)
+response = requests.get(url,verify=False)
 
 print(response.text)
