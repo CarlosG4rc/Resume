@@ -1,9 +1,9 @@
-import http.client
+import math
 
-conn = http.client.HTTPConnection("www.banxico.org.mx")
-payload = ''
-headers = {}
-conn.request("GET", "/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
+def areaCirculo(radio):
+    return (radio**2) * math.pi
+
+r = input ("Cuál es el radio del circulo? " )
+r = int(r)
+a = areaCirculo(r)
+print("{:.4f}".format(a))
