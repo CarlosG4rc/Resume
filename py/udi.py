@@ -1,7 +1,3 @@
-# print('Hello World')
-# import requests
-
-# url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/2022-11-01/2022-11-02"
 import http.client
 
 conn = http.client.HTTPSConnection("www.banxico.org.mx")
