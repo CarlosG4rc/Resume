@@ -12,4 +12,4 @@ response = requests.get(url,verify=False)
 text = json.dumps(response.text, sort_keys=True, indent=4)
 print(text)
 
-print(response.text)
+print(text)
