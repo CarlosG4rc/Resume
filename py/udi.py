@@ -1,13 +1,26 @@
-import requests
+from pyodide.http import pyfetch
 
-url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
-
-payload={}
+key = ""
+endpoint = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
+query = {}
 headers = {}
+response = pyfetch(
+    endpoint,
+    method="GET",
+    body={},
+    headers=headers
+)
+print(str(response))
+# import requests
 
-response = requests.request("GET", url, headers=headers, data=payload)
+# url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
 
-print(response.text)
+# payload={}
+# headers = {}
+
+# response = requests.request("GET", url, headers=headers, data=payload)
+
+# print(response.text)
 
 # import http.client
 
