@@ -25,6 +25,13 @@
     <header class="site-header">
         <div class="contenedor">
             <b><p><u><label id='today'></label></u></p></b>
+            <py-script>
+                
+                import datetime as dt
+                import time
+                pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+
+            </py-script>
         </div>
         <div class="texto-header">
             <h2 class="no-margin">Python</h2>
