@@ -68,37 +68,6 @@
         </div>
     </footer>
     <script>
-        var mybutton = document.getElementById("myBtn")
-        window.onscroll = function(){scrollFunction()};
-
-        function scrollFunction(){
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-                mybutton.style.display = "block";
-            }
-            else {
-                mybutton.style.display = "none";
-            }
-        }
-        function topFunction(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        $(document).ready(function(){
-            $('body').scrollspy({target:".navegacion", offset: 50});
-
-            $("#myNavbar a").on('click', function(event){
-                if(this.hash != ""){
-                    event.preventDefault();
-
-                    var hash = this.hash;
-                    $('html,body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 700, function(){
-                            window.location.hash = hash;
-                    });
-                }
-            });
-        });
         
     </script>
     <py-script src="py/udi.py"></py-script>
