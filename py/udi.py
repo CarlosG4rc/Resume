@@ -1,28 +1,22 @@
+import json
+import datetime as dt
+hoy=dt.date.today().strftime('%Y-%m-%d')
+
+url_api="https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/"+hoy+"/"+hoy+"?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
+
 from pyodide.http import pyfetch
 import asyncio
 
-response = await pyfetch(url="https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471", method="GET")
+response = await pyfetch(url=url_api, method="GET")
 
-output = f"GET request=> status:{response.status}, json:{await response.json()}"
+jsonsdata=await response.json()
 
-print('request_output', output)
-# import requests
+jsonsdata=json.dumps(jsonsdata)
 
-# url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
+data=json.loads(jsonsdata)
 
-# payload={}
-# headers = {}
+valor=data['bmx']['series'][0]['datos'][0]['dato']
+fecha=data['bmx']['series'][0]['datos'][0]['fecha']
 
-# response = requests.request("GET", url, headers=headers, data=payload)
-
-# print(response.text)
-
-# import http.client
-
-# conn = http.client.HTTPSConnection("www.banxico.org.mx")
-# payload = ''
-# headers = {}
-# conn.request("GET", "/SieAPIRest/service/v1/series/SP68257/datos/2022-11-11/2022-11-11?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471", payload, headers)
-# res = conn.getresponse()
-# data = res.read()
-# print(data.decode("utf-8"))
+pyscript.write('udi', valor) 
+pyscript.write('fecha', fecha) 
