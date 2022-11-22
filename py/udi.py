@@ -43,13 +43,13 @@ arr_data=np.array(datahistoric)
 # datos=np.array
 
 for i in arr_data:
-    i=dict.items(i)
-    deita=list(i)
+    # i=dict.items(i)
+    # deita=list(i)
+    deita=json.dumps(i)
+    deita=json.loads(deita)
     arr=np.array(deita)
-    print(arr[1])
-    udiString=arr[1]
-    udi=np.fromstring(udiString,dtype=float,sep=' ')
-    print(udi)
+    print(arr)
+
     
     # np.insert(datos, 1 ,float(i['dato']))
 
