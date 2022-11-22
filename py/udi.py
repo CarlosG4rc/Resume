@@ -41,13 +41,12 @@ arr_data=np.array(datahistoric)
 x = np.arange(0, 100, 10, dtype=float)
 
 key = 0
-key=int(key)
 datos=np.array
 
 for i in arr_data:
-    np.insert(datos,float(i['dato']),key)
+    np.insert(datos, 0 ,float(i['dato']))
     key = key + 1
-print(datos)
+    print(datos)
 
 # print(datos)
 # y = np.vstack([arr_data])
