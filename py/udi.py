@@ -38,17 +38,22 @@ datahistoric=data1['bmx']['series'][0]['datos']
 
 arr_data=np.array(datahistoric)
 
-x = np.arange(0, 100, 10, dtype=float)
+# x = np.arange(0, 100, 10, dtype=float)
 
-key = 0
-datos=np.array
+# datos=np.array
 
 for i in arr_data:
-    np.insert(datos, 0 ,float(i['dato']))
-    key = key + 1
-    print(datos)
+    i=dict.items(i)
+    deita=list(i)
+    arr=np.array(deita)
+    print(arr[1])
+    udiString=arr[1]
+    udi=np.fromstring(udiString,dtype=float,sep=' ')
+    print(udi)
+    
+    # np.insert(datos, 1 ,float(i['dato']))
 
-# print(datos)
+
 # y = np.vstack([arr_data])
 
 # fig, ax = plt.subplots()
