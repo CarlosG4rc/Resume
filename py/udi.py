@@ -47,7 +47,6 @@ datos=np.array
 for i in arr_data:
     np.insert(datos,float(i['dato']),key)
     key = key + 1
-    # print(datos)
 print(datos)
 
 # print(datos)
