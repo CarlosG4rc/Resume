@@ -2,12 +2,13 @@ import json
 import datetime as dt
 import matplotlib.pyplot as plt
 import numpy as np
+from pyodide.http import pyfetch
+import asyncio
+
 hoy=dt.date.today().strftime('%Y-%m-%d')
 
 url_api="https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/"+hoy+"/"+hoy+"?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
 
-from pyodide.http import pyfetch
-import asyncio
 
 response = await pyfetch(url=url_api, method="GET")
 
@@ -40,13 +41,14 @@ arr_data=np.array(datahistoric)
 x = np.arange(0, 100, 10, dtype=float)
 
 key = 0
-
+key=int(key)
 datos=np.array
 
 for i in arr_data:
-    datos[key] = i['dato']
+    np.insert(datos,float(i['dato']),key)
     key = key + 1
-    print(datos)
+    # print(datos)
+print(datos)
 
 # print(datos)
 # y = np.vstack([arr_data])
