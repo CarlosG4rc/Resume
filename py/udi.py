@@ -40,15 +40,17 @@ arr_data=np.array(datahistoric)
 
 # x = np.arange(0, 100, 10, dtype=float)
 
-# datos=np.array
+udi_value=np.array
 
 for i in arr_data:
-    # i=dict.items(i)
-    # deita=list(i)
-    deita=json.dumps(i)
-    deita=json.loads(deita)
+    i=dict.items(i)
+    deita=list(i)
+
     arr=np.array(deita)
-    print(arr)
+    cadena=arr[1]
+    np.insert(udi_value,1,cadena[-1:])
+
+print(udi_value)
 
     
     # np.insert(datos, 1 ,float(i['dato']))
