@@ -38,31 +38,17 @@ datahistoric=data1['bmx']['series'][0]['datos']
 
 arr_data=np.array(datahistoric)
 
-# x = np.arange(0, 100, 10, dtype=float)
-
 udi_value=np.array
+
+k=0
 
 for i in arr_data:
     i=dict.items(i)
     deita=list(i)
-
     arr=np.array(deita)
     cadena=arr[1]
-    np.insert(udi_value,1,cadena[-1:])
+    print(cadena[-1:])
+    np.insert(udi_value,k,cadena[-1:],axis=0)
+    k=k+1
 
 print(udi_value)
-
-    
-    # np.insert(datos, 1 ,float(i['dato']))
-
-
-# y = np.vstack([arr_data])
-
-# fig, ax = plt.subplots()
-
-# ax.set(xlim=(0, 100), xticks=np.arange(1, 100),
-# ylim=(0, 100), yticks=np.arange(1, 100))
-
-# ax.stackplot(x, y)
-
-# plt.show()
