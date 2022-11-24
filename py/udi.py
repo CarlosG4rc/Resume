@@ -38,17 +38,13 @@ datahistoric=data1['bmx']['series'][0]['datos']
 
 arr_data=np.array(datahistoric)
 
-udi_value=np.array
+udi_value=np.array(1)
 
 k=0
 
 for i in arr_data:
     i=dict.items(i)
-    deita=list(i)
-    arr=np.array(deita)
+    arr=np.array(list(i))
     cadena=arr[1]
-    # print(cadena[-1:])
-    np.insert(udi_value,0,cadena[-1:])
-    k=k+1
-
+    udi_value=np.append(udi_value,cadena[-1])
 print(udi_value)
