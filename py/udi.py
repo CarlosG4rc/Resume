@@ -48,7 +48,7 @@ for i in arr_data:
     arr=np.array(deita)
     cadena=arr[1]
     print(cadena[-1:])
-    np.insert(udi_value,k,cadena[-1:],axis=0)
+    np.insert(udi_value,k,cadena[-1:])
     k=k+1
 
 print(udi_value)
