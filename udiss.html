@@ -17,13 +17,14 @@
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    
+    <py-env>
+        - matplotlib
+    </py-env>
 </head>
 <body>
     <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
     <header class="">
         <div class="contenedor">
-            <h3>Programas en python</h3>
             <b><p><u><label id='today'></label></u></p></b>
             <py-script>
                 
@@ -33,39 +34,25 @@
 
             </py-script>
         </div>
+        <div class="texto-header">
+            <h2>UDIS</h2>
+        </div>
     </header>
-    <div class="contenido-habilidades">
-        <div class="prof imagen python">
-            <a href="udiss.html"><i class="fas fa-signal-alt"></i></a>
-            <div class="contenido-skill">
-                <h4>Información UDIS</h4>
-            </div>
-        </div>
-        <!-- <div class="prof html">
-            <i class="fas fa-code"></i>
-            <div class="contenido-skill">
-                <h4>HTML</h4>
-            </div>
-        </div>
-        <div class="prof google">
-            <i class="fab fa-google"></i>
-            <div class="contenido-skill">
-                <h4>Google </h4>
-                <h4>Apps Script</h4>
-            </div>
-        </div>
-        <div class="prof php">
-            <i class="fab fa-php"></i>
-            <div class="contenido-skill">
-                <h4>PHP</h4>
-            </div>
-        </div>
-        <div class="prof sql">
-            <i class="fas fa-database"></i>
-            <div class="contenido-skill">
-                <h4>SQL</h4>
-            </div>
-        </div> -->
+    <div class="contenido-principal contenedor">
+        <main class="sobremi" id="sobremi">
+            <article class="entrada">
+                <div>
+                    <p>Las Unidades de Inversión (UDI) son unidades de valor que establece el Banco de México</p>
+                </div>
+                <div class="contenido-yo">
+                    <label id="fecha"></label>
+                    <p id="udi"></p>
+                </div>
+                <div id="plot">
+                    
+                </div>
+            </article>
+        </main>
     </div>
     <footer class="site-footer">
         <div class="contenedor">
@@ -84,5 +71,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        
+    </script>
+    <py-script src="py/udi.py"></py-script>
 </body>
 </html>
