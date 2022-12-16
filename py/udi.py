@@ -49,6 +49,9 @@ for i in arr_data:
     udi_value=np.append(udi_value,cadena[-1])
     udi_date=np.append(udi_date,cadena2[-1])
 
+udi_value=np.delete(udi_value,0)
+udi_date=np.delete(udi_date,0)
+
 fig, ax = plt.subplots()
 
 ypoints = udi_value
