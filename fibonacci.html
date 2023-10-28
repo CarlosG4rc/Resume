@@ -32,7 +32,6 @@
             <div class="contenedor">
                 <h3 class="text-white">Serie de Fibonacci</h3>
             </div>
-            <py-script src="/py/fib.py"></py-script>
         </header>
         <div class="container">
             <p>
@@ -64,6 +63,10 @@
                 </div>
             </div>
             <h3>Result</h3>
+            <input type="number" id="test_input" value="1">
+            <button id="buton-py" type="submit" pys-onClick="fibonacci">Test</button>
+            
+            <py-script src="/py/fib.py"></py-script>
             <p>If we introduce the value 10, we have:</p>
             <div class="card" style="background-color: Black; color: White;">
                 <div id="fib1" ></div>

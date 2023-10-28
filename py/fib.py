@@ -1,7 +1,14 @@
+from js import console
 
-# fibonacci triangle
+def fibonacci(*args, **kwargs):
+    number = Element('test_input').element.value
+    number = int(number)
+    fibonacci_triangle=fib_triangle(number)
+    print_fib_triangle(fibonacci_triangle)
+
 def fib_triangle(n):
     triangle = []
+    
     for i in range(n):
         row = []
         for j in range(i+1):
@@ -25,5 +32,3 @@ def print_fib_triangle(triangle):
         #print(" ".join(map(str, row)))
 # print("Enter the number of terms: ", end='')
 # n = int(input())
-fibonacci_triangle=fib_triangle(10)
-print_fib_triangle(fibonacci_triangle)
