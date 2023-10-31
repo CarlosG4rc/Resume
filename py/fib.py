@@ -19,16 +19,9 @@ def fib_triangle(n):
         triangle.append(row)
     return triangle
 def print_fib_triangle(triangle):
-    pyscript.write('fib1', triangle[0])
-    pyscript.write('fib2', triangle[1])
-    pyscript.write('fib3', triangle[2])
-    pyscript.write('fib4', triangle[3])
-    pyscript.write('fib5', triangle[4])
-    pyscript.write('fib6', triangle[5])
-    pyscript.write('fib7', triangle[6])
-    pyscript.write('fib8', triangle[7])
-    pyscript.write('fib9', triangle[8])
-    pyscript.write('fib10', triangle[9])
+    for row in range(0,len(triangle)):
+        div = 'fib' + str(row)
+        pyscript.write(div, triangle[row])
         #print(" ".join(map(str, row)))
 # print("Enter the number of terms: ", end='')
 # n = int(input())
