@@ -30,12 +30,12 @@
                 </div>
             </div>
             <div class="contenedor">
-                <h3 class="text-white">Serie de Fibonacci</h3>
+                <h3 class="text-white">Armstrong number</h3>
             </div>
         </header>
         <div class="container">
             <p>
-                Here we have the code for a fibonacci triangle, first we ask for a value to know how many levels we generate
+                Code to say if a number is an Armstrong number.
             </p>
             <div class="card col mx-auto rounded-top" style="width: 50rem; background-color: gray; color: black;">
                 <div class="row px-3">
@@ -50,34 +50,34 @@
             <div class="card col mx-auto" style="width: 50rem; background-color: blue;">
                 <div class="card-body">
                     <code style=" background-color: blue; color: white;">
-                        # fibonacci triangle
-                        <br>def fib_triangle(n):
-                        <br>&nbsp;&nbsp;triangle = []
-                        <br>&nbsp;&nbsp;for i in range(n):
-                        <br>&nbsp;&nbsp;&nbsp;row = []
-                        <br>&nbsp;&nbsp;&nbsp;for j in range(i+1):
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;if j == 0 or j == i:
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.append(1)
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;else:
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.append(triangle[i-1][j-1] + triangle[i-1][j])
-                        <br>&nbsp;&nbsp;triangle.append(row)
-                        <br>&nbsp;&nbsp;return triangle
-                        <br>def print_fib_triangle(triangle):
-                        <br>&nbsp;&nbsp;for row in triangle:
-                        <br>&nbsp;&nbsp;&nbsp;print(" ".join(map(str, row)))
-                        <br>&nbsp;&nbsp;print("Enter the number of terms: ", end='')
-                        <br>n = int(input())
-                        <br>fibonacci_triangle=fib_triangle(n)
-                        <br>print_fib_triangle(fibonacci_triangle)
+                        # program that say if a number is an armstrong number
+                        <br>print ("Enter a positive integer: ")
+                        <br>num = int(input())
+                        <br>n = num
+                        <br>num1 = num
+                        <br>sum = 0
+                        <br>count = 0
+                        <br>while( n != 0):
+                        <br>&nbsp;&nbsp;while(num1 > 0):
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;num1 = num1 // 10
+                        <br>&nbsp;&nbsp;rem = n % 10
+                        <br>&nbsp;&nbsp;sum = sum + rem ** count
+                        <br>&nbsp;&nbsp;n = n // 10
+                        <br>if (sum == num):
+                        <br>&nbsp;&nbsp;print("The number is an Armstrong number")
+                        <br>else:
+                        <br>&nbsp;&nbsp;print("The number is not an Armstrong number")
+                        
                     </code>
                 </div>
             </div>
-            <h3>Result</h3>
+            <h3>Test</h3>
+            <p>We introduce an positive integer:</p>
             <input type="number" id="test_input" value="1">
-            <button class="btn btn-secudnario" id="buton-py" type="submit" pys-onClick="fibonacci">Run</button>
+            <button class="btn btn-secudnario" id="buton-py" type="submit" pys-onClick="armstrong">Run</button>
             
-            <py-script src="/py/fib.py"></py-script>
-            <p>If we introduce the value between 1-20, we have:</p>
+            <py-script src="/py/armstrong.py"></py-script>
             <div class="card rounded-top" style="background-color: gray; color: black;">
                 <div class="row px-3">
                     <div class="col-11">
@@ -89,28 +89,8 @@
                 </div>
             </div>
             <div class="card rounded-bottom" style="background-color: Black; color: White;">
-                <div id="fib0" ></div>
-                <div id="fib1" ></div>
-                <div id="fib2"></div>
-                <div id="fib3"></div>
-                <div id="fib4"></div>
-                <div id="fib5"></div>
-                <div id="fib6"></div>
-                <div id="fib7"></div>
-                <div id="fib8"></div>
-                <div id="fib9"></div>
-                <div id="fib10"></div>
-                <div id="fib11"></div>
-                <div id="fib12"></div>
-                <div id="fib13"></div>
-                <div id="fib14"></div>
-                <div id="fib15"></div>
-                <div id="fib16"></div>
-                <div id="fib17"></div>
-                <div id="fib18"></div>
-                <div id="fib19"></div>
+                <div id="armRes" ></div>
             </div>
-            <a href="fibonacci.html" class="btn btn-secudnario">Reload</a>
         </div>
         <footer class="site-footer">
             <div class="contenedor">
