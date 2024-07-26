@@ -1,268 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" integraty="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4ZBNTSRyMA2Fd33n5dQBlWUE00s/" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <py-env>
-    </py-env>
-</head>
-<body>
-    <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
-    <header class="site-header">
-        <div class="contenedor">
-            <b><p><u><label id='today'></label></u></p></b>
-            <py-script>
-                
-                import datetime as dt
-                import time
-                pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
-
-            </py-script>
-            <div class="barra">
-                <a href="#">
-                    <h1 class="no-margin">Carlos <span>García</span></h1>
-                </a>
-                <nav class="navegacion" id="myNavbar">
-                    <a href="#sobremi" class="btn ">Sobre Mí</a>
-                    <a href="#proyectos" class="btn ">Proyectos</a>
-                    <a href="#contacto" class="btn ">Contactame</a>
-                </nav>
-            </div>
-        </div>
-        <div class="texto-header">
-            <h2 class="no-margin">Desarrollador Web en <a href="https://www.snowball.mx">Snowball.mx</a> <br> y <a href="https://snowballcommunity.com/">Snowball Community</a></h2>
-        </div>
-    </header>
-    <div class="contenido-principal contenedor" style="background-color: #D7DEE6;">
-        <main class="mx-4 sobremi" id="sobremi">
-            <h2>Sobre mí</h2>
-            <article class="entrada">
-                <div class="imagen">
-                    <img style="width:320px;" src="/img/devloper.jpeg" alt="Carlos">
-                </div>
-                <div class="contenido-yo">
-                    <h3 class="no-margin">Formación</h3>
-                    <p>Soy profesional de desarrollo FullStack con 5 años de experiencia en industrias como Tecnología Financiera, Compañías Tech y Startups Medianas.</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" integraty="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4ZBNTSRyMA2Fd33n5dQBlWUE00s/" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <py-env>
+        </py-env>
+    </head>
+    <body>
+        <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
+        <header class="site-header">
+            <div class="contenedor">
+                <b><p><u><label id='today'></label></u></p></b>
+                <py-script>
                     
-                    <p>Me gusta ayudar y encontrar soluciones a problemas cotidianos usando la ingeniería y constantemente pienso en como mejorar mis proyectos.</p>
+                    import datetime as dt
+                    import time
+                    pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+
+                </py-script>
+                <div class="barra">
+                    <a href="#">
+                        <h1 class="no-margin">Carlos <span>García</span></h1>
+                    </a>
+                    <nav class="navegacion" id="myNavbar">
+                        <a href="#sobremi" class="btn ">Sobre Mí</a>
+                        <a href="#proyectos" class="btn ">Proyectos</a>
+                        <a href="#contacto" class="btn ">Contactame</a>
+                    </nav>
                 </div>
-            </article>
-            <article class="entrada">
-                <div class="imagen">
-                    <img src="img/g4rc.PNG" alt="Computer" loading = "lazy">
-                </div>
-                <div class="contenido-blog">
-                    <h3 class="no-margin">Experiencia</h3>
-                    <p>Mi stack técnico incluye experiencia intermedia en PHP, SQL y JavaScript Back-End, con 3 años de uso. Estoy comprometido a contribuir con mi trabajo a alcanzar los objetivos de la empresa gracias a mis habilidades como desarrollador de tecnología.</p>
-                    <p>Me apasiona la programación y el manejo de datos, sigo aprendiendo para renovar mis proyectos y resolver problemas cada vez más complejos.</p>
-                </div>
-            </article>
-            <!-- <label style="font-family: 'Orbitron', sans-serif; color:#00FF00; font-size: 20px;">Un programa es como un chiste, si lo tienes que explicar, no es bueno</label></u> -->
-        </main>
-        <aside class="github">
-            <h2>Visita mi GitHub</h2>
-            <ul class="proyectos">
-                <li class="proyecto1">
-                    <h4 class="no-margin">Serie de Fibonacci</h4>
-                    <p class="no-margin">Lenguaje: <span>Python y C++</span></p>
-                    <a href="https://github.com/CarlosG4rc/new_fib" class="btn btn-secudnario">Código</a>
-                </li>
-                <li class="proyecto1">
-                    <h4 class="no-margin">Llenado de documentos desde Excel</h4>
-                    <p class="no-margin">Lenguaje: <span>Python</span></p>
-                    <a href="https://github.com/CarlosG4rc/agreement" class="btn btn-secudnario">Código</a>
-                </li>
-            </ul>
-            <img src="img/contratos_py.JPG" alt="apps script">
-            <p><u></p>
-        </aside>
-    </div>
-    <div class="contenedor">
-        <h3>Stack</h3>
-        <div class="contenido-habilidades">
-            <div class="prof texto java">
-                <a href="javascript.html">
-                    <i class="fab fa-js-square"></i>
-                    <div class="contenido-skill">
-                        <h4>JavaScript</h4>
+            </div>
+            <div class="texto-header">
+                <h2 class="no-margin">Desarrollador Web en <a href="https://www.snowball.mx">Snowball.mx</a> <br> y <a href="https://snowballcommunity.com/">Snowball Community</a></h2>
+            </div>
+        </header>
+        <div class="contenido-principal contenedor" style="background-color: #D7DEE6;">
+            <main class="mx-4 sobremi" id="sobremi">
+                <h2>Sobre mí</h2>
+                <article class="entrada">
+                    <div class="imagen">
+                        <img style="width:320px;" src="/img/devloper.jpeg" alt="Carlos">
                     </div>
-                </a>
-            </div>
-            <div class="prof imagen python">
-                <a href="py-programs.html">
-                    <i class="fab fa-python"></i>
-                    <div class="contenido-skill">
-                        <h4>Python</h4>
+                    <div class="contenido-yo">
+                        <h3 class="no-margin">Formación</h3>
+                        <p>Soy profesional de desarrollo FullStack con 5 años de experiencia en industrias como Tecnología Financiera, Compañías Tech y Startups Medianas.</p>
+                        
+                        <p>Me gusta ayudar y encontrar soluciones a problemas cotidianos usando la ingeniería y constantemente pienso en como mejorar mis proyectos.</p>
                     </div>
-                </a>
-            </div>
-            <div class="prof html">
-                <a href="mongo.html">
-                    <img class="col" style="width: 30%; margin-left: 112px; margin-top: 10px;" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115c-.28-.394-.53-.954-.735-1.44c-.036.495-.055.685-.523 1.184c-.723.566-4.438 3.682-4.74 10.02c-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695c-.381-.045-.765-1.76-.765-2.405'/%3E%3C/svg%3E">
-                    <div class="contenido-skill">
-                        <h4>MongoDB</h4>
+                </article>
+                <article class="entrada">
+                    <div class="imagen">
+                        <img src="img/g4rc.PNG" alt="Computer" loading = "lazy">
                     </div>
-                </a>
-            </div>
-            <div class="prof google">
-                <a href="cpp-programs.html">
-                    <i class="fas fa-laptop-code"></i>
-                    <div class="contenido-skill">
-                        <h4>C++</h4>
+                    <div class="contenido-blog">
+                        <h3 class="no-margin">Experiencia</h3>
+                        <p>Mi stack técnico incluye experiencia intermedia en PHP, SQL y JavaScript Back-End, con 3 años de uso. Estoy comprometido a contribuir con mi trabajo a alcanzar los objetivos de la empresa gracias a mis habilidades como desarrollador de tecnología.</p>
+                        <p>Me apasiona la programación y el manejo de datos, sigo aprendiendo para renovar mis proyectos y resolver problemas cada vez más complejos.</p>
                     </div>
-                </a>
-            </div>
-            <div class="prof php">
-                <i class="fab fa-php"></i>
-                <div class="contenido-skill">
-                    <h4>PHP</h4>
-                </div>
-            </div>
-            <div class="prof sql">
-                <i class="fas fa-database"></i>
-                <div class="contenido-skill">
-                    <h4>SQL</h4>
-                </div>
-            </div>
+                </article>
+                <!-- <label style="font-family: 'Orbitron', sans-serif; color:#00FF00; font-size: 20px;">Un programa es como un chiste, si lo tienes que explicar, no es bueno</label></u> -->
+            </main>
+            <aside class="github">
+                <h2>Visita mi GitHub</h2>
+                <ul class="proyectos">
+                    <li class="proyecto1">
+                        <h4 class="no-margin">Serie de Fibonacci</h4>
+                        <p class="no-margin">Lenguaje: <span>Python y C++</span></p>
+                        <a href="https://github.com/CarlosG4rc/new_fib" class="btn btn-secudnario">Código</a>
+                    </li>
+                    <li class="proyecto1">
+                        <h4 class="no-margin">Llenado de documentos desde Excel</h4>
+                        <p class="no-margin">Lenguaje: <span>Python</span></p>
+                        <a href="https://github.com/CarlosG4rc/agreement" class="btn btn-secudnario">Código</a>
+                    </li>
+                </ul>
+                <img src="img/contratos_py.JPG" alt="apps script">
+                <p><u></p>
+            </aside>
         </div>
-    </div>
-    <div class="contenedor">
-        <h2  id="proyectos">Mis Proyectos</h2>
-        <article class="curso grid " >
-            <div class="columnas-4">
-                <img src="img/restaurantepy.PNG" alt="apps script">
-            </div>
-            <div class="columnas-8">
-                <h3 class="no-margin">Python, SQLite</h3>
-                <h4 class="no-margin">Creación de Menú en python</h4>
-                <p class="no-margin">Se llena la base de datos en SQLite y se muestras datos por medio de una interfaz gráfica realizado en Python </p>
-                <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=python" class="btn btn-secudnario">Proyectos en Python</a>
-            </div>
-            <div class="columnas-4">
-                <img src="img/ScienceComp.PNG" alt="apps script">
-            </div>
-            <div class="columnas-8">
-                <h3 class="no-margin">Python</h3>
-                <h4 class="no-margin">Triangulo de fibonacci Python</h4>
-                <p class="no-margin">Creación de triangulo de fibonacci en python</p>
-                <a href="https://carlos-g4rcia.netlify.app/fibonacci.html" class="btn btn-secudnario">Test it</a>
-            </div>
-            <div class="columnas-4">
-                <img src="img/GAS2.PNG" alt="apps script">
-            </div>
-            <div class="columnas-8">
-                <h3 class="no-margin">Google Apps Script</h3>
-                <h4 class="no-margin">Generador de hojas automatizado en spreadsheet</h4>
-                <p class="no-margin">Implementado para generar hojas de acuerdo a datos precargasdos en Spreadsheet</p>
-                <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=javascript" class="btn btn-secudnario">Proyectos Apps Script</a>
-            </div>
-            <div class="columnas-4">
-                <img src="img/Conda.PNG" alt="apps script">
-            </div>
-            <div class="columnas-8">
-                <h3 class="no-margin">Python, Anaconda, JupyterNotebook</h3>
-                <h4 class="no-margin">Curso Machine Learning</h4>
-                <p class="no-margin">Continuo preparandome en el desarrollo de Aplicaciones y manejo de datos.</p>
-                <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=jupyter+notebook" class="btn btn-secudnario">Proyectos JupyterNotebook</a>
-            </div>
-        </article>
-    </div>
-    <div id="contacto">
-        <form class="d-none d-md-block contenedor contenido-centrado" action="mailto:carlosesolrac93@gmail.com" method="post" name="form1">
-            <fieldset>
-                <legend>Contactame</legend>
-                <label for="nombre">Nombre: </label>
-                <input class="nombre" id="nombre" name="nombre" type="text" placeholder="Tu Nombre" />
-                <label for="email">Email: </label>
-                <input class="email" id="email" name="nombre" type="text" placeholder="Tu Email"/>
-                <p> ¿Te gustaría contactarme o darme tu opinión?</p>
-                <textarea class="opinion" id="opinion" name="opinion"></textarea>
-                <input class="btn btn-secudnario" name="Submit" type="submit" value="Enviar" />
-            </fieldset>
-        </form>
-        <div class="contenedor contenido-centrado">
-            <fieldset>
-                <legend>Redes Sociales</legend>
-                <div class="iconos-contacto">
-                    <a href="https://www.facebook.com/profile.php?id=100000597635722&mibextid=2JQ9oc"><i class="fab fa-facebook-square"></i></a>
-                    <!-- <a href="https://twitter.com/CarlosG4r"><i class="fa-brands fa-square-x-twitter"></i></a> -->
-                    <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-24bbb099/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/CarlosG4rc"><i class="fab fa-github-square"></i></a>
-                </div>
-            </fieldset>
-        </div>
-        
-        <div class="correo-telefono">
-            <ul class="contacto-personal">
-                <li><i class="far fa-envelope"> <span> carlosesolrac93@gmail.com</span></i></li>
-                <!-- <li><i class="fab fa-whatsapp"><i class="fa-telegram-plane"></i> <span> 5540390456 </span></i></li> -->
-            </ul>
-        </div>
-    </div>
-    <footer class="site-footer">
         <div class="contenedor">
-            <div class="barra">
-                <p>Carlos <span>García</span></p>
-                <nav class="navegacion-foot" id="myNavbar">
-                    <a href="#sobremi">Sobre Mí |</a>
-                    <a href="#proyectos"> Proyectos | </a>
-                    <a href="#contacto">Contactame</a>
-                </nav>
-                <nav>
-                    <object  data="file/CV_1.pdf" type="application/x-pdf" title="CV" width="500" height="720">
-                        <a href="file/CV_1.pdf" class="btn btn-secudnario">Descarga CV</a>
-                    </object>
-                </nav>
+            <h3>Stack</h3>
+            <div class="contenido-habilidades">
+                <div class="prof texto java">
+                    <a href="javascript.html">
+                        <i class="fab fa-js-square"></i>
+                        <div class="contenido-skill">
+                            <h4>JavaScript</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof imagen python">
+                    <a href="py-programs.html">
+                        <i class="fab fa-python"></i>
+                        <div class="contenido-skill">
+                            <h4>Python</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof html">
+                    <a href="mongo.html">
+                        <img class="col" style="width: 30%; margin-left: 112px; margin-top: 10px;" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115c-.28-.394-.53-.954-.735-1.44c-.036.495-.055.685-.523 1.184c-.723.566-4.438 3.682-4.74 10.02c-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695c-.381-.045-.765-1.76-.765-2.405'/%3E%3C/svg%3E">
+                        <div class="contenido-skill">
+                            <h4>MongoDB</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof google">
+                    <a href="cpp-programs.html">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="contenido-skill">
+                            <h4>C++</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="prof php">
+                    <i class="fab fa-php"></i>
+                    <div class="contenido-skill">
+                        <h4>PHP</h4>
+                    </div>
+                </div>
+                <div class="prof sql">
+                    <i class="fas fa-database"></i>
+                    <div class="contenido-skill">
+                        <h4>SQL</h4>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-    <script>
-        var mybutton = document.getElementById("myBtn")
-        window.onscroll = function(){scrollFunction()};
+        <div class="contenedor">
+            <h2  id="proyectos">Mis Proyectos</h2>
+            <article class="curso grid " >
+                <div class="columnas-4">
+                    <img src="img/restaurantepy.PNG" alt="apps script">
+                </div>
+                <div class="columnas-8">
+                    <h3 class="no-margin">Python, SQLite</h3>
+                    <h4 class="no-margin">Creación de Menú en python</h4>
+                    <p class="no-margin">Se llena la base de datos en SQLite y se muestras datos por medio de una interfaz gráfica realizado en Python </p>
+                    <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=python" class="btn btn-secudnario">Proyectos en Python</a>
+                </div>
+                <div class="columnas-4">
+                    <img src="img/ScienceComp.PNG" alt="apps script">
+                </div>
+                <div class="columnas-8">
+                    <h3 class="no-margin">Python</h3>
+                    <h4 class="no-margin">Triangulo de fibonacci Python</h4>
+                    <p class="no-margin">Creación de triangulo de fibonacci en python</p>
+                    <a href="https://carlos-g4rcia.netlify.app/fibonacci.html" class="btn btn-secudnario">Test it</a>
+                </div>
+                <div class="columnas-4">
+                    <img src="img/GAS2.PNG" alt="apps script">
+                </div>
+                <div class="columnas-8">
+                    <h3 class="no-margin">Google Apps Script</h3>
+                    <h4 class="no-margin">Generador de hojas automatizado en spreadsheet</h4>
+                    <p class="no-margin">Implementado para generar hojas de acuerdo a datos precargasdos en Spreadsheet</p>
+                    <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=javascript" class="btn btn-secudnario">Proyectos Apps Script</a>
+                </div>
+                <div class="columnas-4">
+                    <img src="img/Conda.PNG" alt="apps script">
+                </div>
+                <div class="columnas-8">
+                    <h3 class="no-margin">Python, Anaconda, JupyterNotebook</h3>
+                    <h4 class="no-margin">Curso Machine Learning</h4>
+                    <p class="no-margin">Continuo preparandome en el desarrollo de Aplicaciones y manejo de datos.</p>
+                    <a href="https://github.com/CarlosG4rc?tab=repositories&q=&type=&language=jupyter+notebook" class="btn btn-secudnario">Proyectos JupyterNotebook</a>
+                </div>
+            </article>
+        </div>
+        <div id="contacto">
+            <form class="d-none d-md-block contenedor contenido-centrado" action="mailto:carlosesolrac93@gmail.com" method="post" name="form1">
+                <fieldset>
+                    <legend>Contactame</legend>
+                    <label for="nombre">Nombre: </label>
+                    <input class="nombre" id="nombre" name="nombre" type="text" placeholder="Tu Nombre" />
+                    <label for="email">Email: </label>
+                    <input class="email" id="email" name="nombre" type="text" placeholder="Tu Email"/>
+                    <p> ¿Te gustaría contactarme o darme tu opinión?</p>
+                    <textarea class="opinion" id="opinion" name="opinion"></textarea>
+                    <input class="btn btn-secudnario" name="Submit" type="submit" value="Enviar" />
+                </fieldset>
+            </form>
+            <div class="contenedor contenido-centrado">
+                <fieldset>
+                    <legend>Redes Sociales</legend>
+                    <div class="iconos-contacto">
+                        <a href="https://www.facebook.com/profile.php?id=100000597635722&mibextid=2JQ9oc"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="https://twitter.com/CarlosG4r"><i class="fa-brands fa-square-x-twitter"></i></a> -->
+                        <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-24bbb099/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/CarlosG4rc"><i class="fab fa-github-square"></i></a>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="correo-telefono">
+                <ul class="contacto-personal">
+                    <li><i class="far fa-envelope"> <span> carlosesolrac93@gmail.com</span></i></li>
+                    <!-- <li><i class="fab fa-whatsapp"><i class="fa-telegram-plane"></i> <span> 5540390456 </span></i></li> -->
+                </ul>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="contenedor">
+                <div class="barra">
+                    <p>Carlos <span>García</span></p>
+                    <nav class="navegacion-foot" id="myNavbar">
+                        <a href="#sobremi">Sobre Mí |</a>
+                        <a href="#proyectos"> Proyectos | </a>
+                        <a href="#contacto">Contactame</a>
+                    </nav>
+                    <nav>
+                        <object  data="file/CV_1.pdf" type="application/x-pdf" title="CV" width="500" height="720">
+                            <a href="file/CV_1.pdf" class="btn btn-secudnario">Descarga CV</a>
+                        </object>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var mybutton = document.getElementById("myBtn")
+            window.onscroll = function(){scrollFunction()};
 
-        function scrollFunction(){
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-                mybutton.style.display = "block";
-            }
-            else {
-                mybutton.style.display = "none";
-            }
-        }
-        function topFunction(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        $(document).ready(function(){
-            $('body').scrollspy({target:".navegacion", offset: 50});
-
-            $("#myNavbar a").on('click', function(event){
-                if(this.hash != ""){
-                    event.preventDefault();
-
-                    var hash = this.hash;
-                    $('html,body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 700, function(){
-                            window.location.hash = hash;
-                    });
+            function scrollFunction(){
+                if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                    mybutton.style.display = "block";
                 }
+                else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction(){
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            $(document).ready(function(){
+                $('body').scrollspy({target:".navegacion", offset: 50});
+
+                $("#myNavbar a").on('click', function(event){
+                    if(this.hash != ""){
+                        event.preventDefault();
+
+                        var hash = this.hash;
+                        $('html,body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 700, function(){
+                                window.location.hash = hash;
+                        });
+                    }
+                });
             });
-        });
-        
-    </script>
-</body>
+            
+        </script>
+    </body>
 </html>
