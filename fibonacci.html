@@ -83,31 +83,31 @@
             <h3>Result</h3>
             <input type="number" id="test_input" value="1">
             <button class="btn btn-secudnario" id="buton-py" type="submit" pys-onClick="fibonacci">Run</button>
-            <script type="py">
-                from js import console
+            <script type="text/python">
+            from js import console
 
-                def fibonacci(*args, **kwargs):
-                    number = Element('test_input').element.value
-                    number = int(number)
-                    fibonacci_triangle=fib_triangle(number)
-                    print_fib_triangle(fibonacci_triangle)
+            def fibonacci(*args, **kwargs):
+                number = Element('test_input').element.value
+                number = int(number)
+                fibonacci_triangle=fib_triangle(number)
+                print_fib_triangle(fibonacci_triangle)
 
-                def fib_triangle(n):
-                    triangle = []
-                    
-                    for i in range(n):
-                        row = []
-                        for j in range(i+1):
-                            if j == 0 or j == i:
-                                row.append(1)
-                            else:
-                                row.append(triangle[i-1][j-1] + triangle[i-1][j])
-                        triangle.append(row)
-                    return triangle
-                def print_fib_triangle(triangle):
-                    for row in range(0,len(triangle)):
-                        div = 'fib' + str(row)
-                        pyscript.write(div, triangle[row])
+            def fib_triangle(n):
+                triangle = []
+                
+                for i in range(n):
+                    row = []
+                    for j in range(i+1):
+                        if j == 0 or j == i:
+                            row.append(1)
+                        else:
+                            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+                    triangle.append(row)
+                return triangle
+            def print_fib_triangle(triangle):
+                for row in range(0,len(triangle)):
+                    div = 'fib' + str(row)
+                    pyscript.write(div, triangle[row])
             </script>
             <p>If we introduce the value between 1-20, we get:</p>
             <div class="card rounded-top" style="background-color: gray; color: black;">
