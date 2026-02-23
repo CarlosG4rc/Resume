@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from pyodide.http import pyfetch
 import asyncio
+from pyscript import display
 
 hoy=dt.date.today().strftime('%Y-%m-%d')
 
@@ -21,10 +22,10 @@ data=json.loads(jsonsdata)
 valor=data['bmx']['series'][0]['datos'][0]['dato']
 fecha=data['bmx']['series'][0]['datos'][0]['fecha']
 
-pyscript.write('udi', valor)
-pyscript.write('fecha', fecha) 
+display(valor, target='udi')
+display(fecha, target='fecha') 
 
-url_api1="https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/2023-10-11/"+hoy+"?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
+url_api1="https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP68257/datos/2026-02-01/"+hoy+"?token=04021aac739b77e232d9670147936836e9e9fc31e08bde26665c0f013df94471"
 
 response = await pyfetch(url=url_api1, method="GET")
 
@@ -65,4 +66,4 @@ plt.title('UDI values')
 plt.gcf().autofmt_xdate()
 
 fig
-pyscript.write('plot', fig)
+display(fig, target='plot')

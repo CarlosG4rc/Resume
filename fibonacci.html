@@ -23,7 +23,7 @@
     </head>
     <body>
         <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
-        <script src="js/header.js"></script>
+        <script src="header.js"></script>
         <script>loadInternalHeader("Serie de Fibonacci");</script>
 
         <div class="container">
@@ -67,14 +67,20 @@
             </div>
             <h3>Result</h3>
             <input type="number" id="test_input" value="1">
-            <button class="btn btn-secudnario" id="buton-py" type="submit" pys-onClick="fibonacci">Run</button>
-            <script type="text/python" config='{"packages":["js"]}'>
-            from js import console
+            <button class="btn btn-secudnario" id="buton-py" type="submit">Run</button>
+            <script type="py">
+            from pyscript import display, when
+            from js import document
 
-            def fibonacci(*args, **kwargs):
-                number = Element('test_input').element.value
-                number = int(number)
-                fibonacci_triangle=fib_triangle(number)
+            @when("click", "#buton-py")
+            def fibonacci(event):
+                number = int(document.getElementById('test_input').value)
+                # Limpiar resultados anteriores
+                for i in range(20):
+                    el = document.getElementById(f'fib{i}')
+                    if el: el.innerHTML = ""
+                
+                fibonacci_triangle = fib_triangle(number)
                 print_fib_triangle(fibonacci_triangle)
 
             def fib_triangle(n):
@@ -90,9 +96,9 @@
                     triangle.append(row)
                 return triangle
             def print_fib_triangle(triangle):
-                for row in range(0,len(triangle)):
+                for row in range(len(triangle)):
                     div = 'fib' + str(row)
-                    pyscript.write(div, triangle[row])
+                    display(triangle[row], target=div)
             </script>
             <p>If we introduce the value between 1-20, we get:</p>
             <div class="card rounded-top" style="background-color: gray; color: black;">
@@ -129,25 +135,6 @@
             </div>
             <a href="fibonacci.html" class="btn btn-secudnario">Reload</a>
         </div>
-        <footer class="site-footer">
-            <div class="contenedor">
-                <div class="barra">
-                    
-                    <a href="../index.html">
-                        <p>Carlos <span>García</span></p>
-                    </a>
-                    <nav class="navegacion-foot" id="myNavbar">
-                        <a href="../index.html#sobremi">Sobre Mí |</a>
-                        <a href="../index.html#proyectos"> Proyectos | </a>
-                        <a href="../index.html#contacto">Contactame</a>
-                    </nav>
-                    <nav>
-                        <object  data="file/CV_.pdf" type="application/x-pdf" title="CV" width="500" height="720">
-                            <a href="file/CV_.pdf" class="btn btn-secudnario">Descarga CV</a>
-                        </object>
-                    </nav>
-                </div>
-            </div>
-        </footer>
+        <script src="footer.js"></script>
     </body>
 </html>

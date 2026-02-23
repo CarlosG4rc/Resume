@@ -1,15 +1,17 @@
 function loadInternalHeader(title) {
     const headerHTML = `
-    <header style="background-color: black;">
+    <header class="bg-dark text-white py-4 mb-4 shadow">
         <div class="contenedor">
-            <div class="barra">
-                <a href="index.html">
-                    <h1 class="no-margin text-white">Carlos <span>García</span></h1>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-decoration-none">
+                    <h1 class="m-0 text-white" style="font-size: 2.5rem;">Carlos <span>García</span></h1>
                 </a>
+                <div class="text-end d-none d-md-block">
+                    <p class="m-0 text-white-50"><small><label id='today'></label></small></p>
+                </div>
             </div>
-            <b><p><u><label id='today'></label></u></p></b>
         </div>
-        ${title ? `<div class="contenedor"><h3 class="text-white">${title}</h3></div>` : ''}
+        ${title ? `<div class="contenedor mt-3 border-top border-secondary pt-3"><h3 class="text-white m-0">${title}</h3></div>` : ''}
     </header>
     `;
     
