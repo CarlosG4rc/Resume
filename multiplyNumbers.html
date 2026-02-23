@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume</title>
+        <script src="head.js"></script>
+        <script>loadHeadDependencies();</script>
+    </head>
+    <body>
+        <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
+        <script src="header.js"></script>
+        <script>loadInternalHeader("Multiply Numbers");</script>
+
+        <div class="container mt-5">
+            <div class="row">
+                <p>This is a script that multiplies three numbers</p>
+            </div>
+            <div class="row">
+                <div class="col mx-auto">
+                    <p>
+                        This is an algorithm that multiplies three floating-point numbers with high precision.
+                        <br>
+                        The stack of this project is JavaScript.
+                    </p>
+                </div>
+            </div>
+            <div class="card col mx-auto" style="width: 100rem; background-color: blue;">
+                <div class="card-body">
+                    <code style=" background-color: blue; color: white;">
+                        function validarMonto(valorEsperado, valor1, valor2, valor3) {
+                        <br>&nbsp;&nbsp;const numbersParam = [valor1, valor2, valor3];
+                        <br>
+                        <br>&nbsp;&nbsp;// Paso 1: separar parte entera y decimal
+                        <br>&nbsp;&nbsp;const dataNumbers = numbersParam.map(num => {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;const [intPart, decPart = ""] = String(num).trim().split(".");
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;const numberInt = BigInt((intPart + decPart) || "0");
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;return { numberInt, decimals: decPart.length };
+                        <br>&nbsp;&nbsp;});
+                        <br>
+                        <br>&nbsp;&nbsp;// Paso 2: multiplicar todos los enteros
+                        <br>&nbsp;&nbsp;const totalMultiplicationInt = dataNumbers.reduce(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;(accumulatedProduct, listNumbers) => accumulatedProduct * listNumbers.numberInt,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;BigInt(1)
+                        <br>&nbsp;&nbsp;);
+                        <br>
+                        <br>&nbsp;&nbsp;// Paso 3: sumar todos los decimales
+                        <br>&nbsp;&nbsp;const totalDecimals = dataNumbers.reduce(
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;(accumulatedSum, listNumbers) => accumulatedSum + listNumbers.decimals,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;0
+                        <br>&nbsp;&nbsp;);
+                        <br>
+                        <br>&nbsp;&nbsp;// Paso 4: reconstruir el resultado con punto decimal
+                        <br>&nbsp;&nbsp;const resultStr = totalMultiplicationInt.toString();
+                        <br>&nbsp;&nbsp;const pointPosition = resultStr.length - totalDecimals;
+                        <br>&nbsp;&nbsp;let resultToMultiplication;
+                        <br>
+                        <br>&nbsp;&nbsp;if (pointPosition > 0) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;resultToMultiplication = 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultStr.slice(0, pointPosition) + "." + resultStr.slice(pointPosition);
+                        <br>&nbsp;&nbsp;} else {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;resultToMultiplication = 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"0." + "0".repeat(-pointPosition) + resultStr;
+                        <br>&nbsp;&nbsp;}
+                        <br>
+                        <br>&nbsp;&nbsp;// Paso 5: eliminar ceros extra al final
+                        <br>&nbsp;&nbsp;resultToMultiplication = resultToMultiplication.replace(/\.?0+$/, "");
+                        <br>
+                        <br>&nbsp;&nbsp;return ("Resultado: " + resultToMultiplication + " Valor esperado: " + valorEsperado);
+                        <br>}
+                        <br>
+                        <br>// Ejemplo de uso:
+                        <br>console.log(validarMonto(1250 * 18.4639 * 1.1582, "1250", "18.4639", "1.1582"));
+                    </code>
+                </div>
+            </div>
+        </div>
+        <script src="footer.js"></script>
+    </body>
+</html>
