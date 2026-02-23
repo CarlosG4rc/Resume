@@ -21,18 +21,9 @@
     </head>
     <body>
         <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
-        <header style="background-color: black;">
-            <div class="contenedor">
-                <div class="barra">
-                    <a href="../index.html">
-                        <h1 class="no-margin text-white">Carlos <span>García</span></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="contenedor">
-                <h3 class="text-white">.jar Analizer</h3>
-            </div>
-        </header>
+        <script src="js/header.js"></script>
+        <script>loadInternalHeader(".jar Analizer");</script>
+
         <div class="container mt-5">
             <div class="row">
                 <p>Microservice that analize a .jar file.</p>

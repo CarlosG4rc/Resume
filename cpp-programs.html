@@ -20,24 +20,10 @@
     
 </head>
 <body>
+    <script src="js/header.js"></script>
+    <script>loadInternalHeader("TITULO_DE_LA_PAGINA_AQUI");</script>
     <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
-    <header style="background-color: black;">
-        <div class="contenedor">
-            <div class="barra">
-                <a href="../index.html">
-                    <h1 class="no-margin text-white">Carlos <span>García</span></h1>
-                </a>
-            </div>
-            <b><p><u><label id='today'></label></u></p></b>
-            <py-script>
-                
-                import datetime as dt
-                import time
-                pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
-
-            </py-script>
-        </div>
-    </header>
+    
     <div class="contenedor mt-5">
         <div class="prof imagen python">
             <a href="binarycpp.html">

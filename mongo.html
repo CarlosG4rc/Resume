@@ -20,24 +20,10 @@
     
 </head>
 <body>
-    <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
-    <header style="background-color: black;">
-        <div class="contenedor">
-            <div class="barra">
-                <a href="../index.html">
-                    <h1 class="no-margin text-white">Carlos <span>García</span></h1>
-                </a>
-            </div>
-            <b><p><u><label id='today'></label></u></p></b>
-            <py-script>
-                
-                import datetime as dt
-                import time
-                pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+    <script src="js/header.js"></script>
+    <script>loadInternalHeader("Carlos García");</script>
 
-            </py-script>
-        </div>
-    </header>
+    <button class="myBtn" onclick="topFunction()" id="myBtn" title="Go Up"><i class="fas fa-chevron-up"></i></button>
     <div class="container text-center my-3">
         <a href="https://www.coursera.org/account/accomplishments/verify/XMG5RGRWYN8G" target="_blank">
             <img src="/img/mongo_cert.png" alt="Node.js Certificate" class="img-fluid">
