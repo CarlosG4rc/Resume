@@ -17,8 +17,8 @@ function loadHeadDependencies(includePyScript = false) {
     ];
 
     if (includePyScript) {
-        dependencies.push('<link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">');
-        dependencies.push('<script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>');
+        dependencies.push('<link rel="stylesheet" href="https://pyscript.net/releases/2025.11.1/core.css">');
+        dependencies.push('<script type="module" src="https://pyscript.net/releases/2025.11.1/core.js"></script>');
     }
 
     document.head.insertAdjacentHTML('beforeend', dependencies.join('\n'));
