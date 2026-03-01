@@ -11,7 +11,7 @@ const footerHTML = `
                 <a href="index.html#contacto">Contact me</a>
             </nav>
             <nav>
-                <a href="file/CV_.pdf" class="btn btn-secudnario" target="_blank">Download CV</a>
+                <a href="file/CV.pdf" class="btn btn-secudnario" target="_blank">Download CV</a>
             </nav>
         </div>
     </div>
